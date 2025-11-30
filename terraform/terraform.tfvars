@@ -1,0 +1,10 @@
+image_id = "173c3fc2-de3e-4b8b-bca5-9959785d8faa"
+node_count = 1
+flavor_name = "STD2-1-1"
+key_pair_name = "kali_linux"
+disk_size = 10
+sec_group = ["8be97965-7cc9-480e-a793-f30e58c5bb2e"]
+network = "ec8c610e-6387-447e-83d2-d2c541e88164"
+dbtype = "postgresql"
+db_version = "17"
+db-instance-flavor = "STD2-2-8"
