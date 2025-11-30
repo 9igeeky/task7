@@ -1,0 +1,15 @@
+app_name: flaskapp
+app_user: flaskapp
+app_dir: /opt/flaskapp
+app_port: 8000
+nginx_listen_port: 80
+server_name: "_"
+
+db_name: flaskdb
+db_host: 127.0.0.1
+db_port: 5432
+db_user: flaskuser
+db_password: "ChangeMe_SuperStrong123!"   # TIP: put this in Ansible Vault later
+
+postgresql_install: true
+timezone: "Europe/Moscow"

@@ -1,0 +1,25 @@
+---
+- name: Configure Ubuntu server with Flask app
+  hosts: all
+  become: yes
+  pre_tasks:
+    - name: Include common tasks
+      include_role:
+        name: common
+        tasks_from: main.yml
+
+  roles:
+    - role: postgres
+      when: postgresql_install
+    - role: nginx
+    - role: app
+
+  post_tasks:
+    - name: Display deployment info
+      debug:
+        msg:
+          - "Deployment completed successfully!"
+          - "Application: {{ app_name }}"
+          - "Directory: {{ app_dir }}"
+          - "Port: {{ app_port }}"
+          - "PostgreSQL: {{ 'Enabled' if postgresql_install else 'Disabled' }}"
